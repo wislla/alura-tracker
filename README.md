@@ -7,7 +7,6 @@ Após o término da formação, foi implementado melhorias na estrutura do códi
 ![image](https://github.com/user-attachments/assets/2427ef35-9579-422f-bd99-e643bbb7ca1f)
 ![image](https://github.com/user-attachments/assets/a60e5711-a402-4d3c-81d0-40d9dada0069)
 ![image](https://github.com/user-attachments/assets/c02879f2-0626-45ce-8433-3d94a9307f4f)
-![image](https://github.com/user-attachments/assets/af822a25-347a-4961-a27c-f8a0a8b0e50f)
 
 
 
