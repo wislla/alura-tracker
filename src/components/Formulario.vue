@@ -3,28 +3,13 @@
 <script lang="ts" setup>
 import { computed, ref } from 'vue'
 import Temporizador from './Temporizador.vue'
-// import type ITarefa from '@/interfaces/ITarefa'
 import { useStore } from 'vuex'
 import { key } from '@/store/index'
-// import type IProjeto from '@/interfaces/IProjeto'
 const descricao = ref<string>('')
 
-function finalizarTarefa(tempoDecorrido: number): void {
-  console.log(tempoDecorrido)
-  console.log('desc', descricao.value)
-
-  // emit('aoSalvarTarefa', {
-  //   duracaoEmSegundos: tempoDecorrido,
-  //   descricao: descricao.value,
-  //   projeto: projetos.value.find((proj) => proj.id == idProjeto.value) as IProjeto,
-  // })
-
+function finalizarTarefa(): void {
   descricao.value = ''
 }
-
-// const emit = defineEmits<{
-//   (e: 'aoSalvarTarefa', tarefa: ITarefa): void
-// }>()
 
 const store = useStore(key)
 const projetos = computed(() => store.state.projeto.projetos)

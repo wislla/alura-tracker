@@ -50,9 +50,7 @@ function alterarTarefa() {
 const filtro = ref<string>('')
 
 watchEffect(() => {
-  console.log(filtro.value)
   store.dispatch(OBTER_TAREFAS, filtro.value)
-  //.filter((t) => !filtro.value || t.descricao.includes(filtro.value))
 })
 </script>
 

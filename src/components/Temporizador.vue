@@ -4,20 +4,21 @@ import { ref } from 'vue'
 import Cronometro from './Cronometro.vue'
 
 const tempoEmSegundos = ref<number>(0)
-const cronometro = ref<number>(0)
+const cronometro = ref<ReturnType<typeof setInterval> | null>(null)
 const cronometroRodando = ref<boolean>(false)
 
 function iniciar() {
   cronometroRodando.value = true
   cronometro.value = setInterval(() => {
     tempoEmSegundos.value = tempoEmSegundos.value + 1
-    console.log('incrementando o contador')
   }, 1000)
 }
 
 function finalizar() {
   cronometroRodando.value = false
-  clearInterval(cronometro.value)
+  if (cronometro.value !== null) {
+    clearInterval(cronometro.value)
+  }
   emit('aoTemporizadorFinalizado', tempoEmSegundos.value)
   tempoEmSegundos.value = 0
 }
