@@ -1,39 +1,75 @@
-# alura-tracker
+# ⏱️ Alura Tracker
 
-This template should help get you started developing with Vue 3 in Vite.
+Parte deste projeto foi inicialmente desenvolvida durante a Formação "Ouse com o Framework Vue.js 3" da Alura, com o objetivo de aplicar na prática os conceitos de Vue 3, TypeScript e boas práticas em uma aplicação de gerenciamento de tarefas com temporizador estilo Pomodoro.
 
-## Recommended IDE Setup
+Após o término da formação, foi implementado melhorias na estrutura do código, organização dos componentes, inclusão de testes automatizados e ajustes visuais, visando torná-lo uma aplicação mais robusta e realista para uso prático ou como base para estudos.
 
-[VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur).
+![image](https://github.com/user-attachments/assets/7b1915c5-63b5-4e3b-8fd9-e7016c0994a8)
 
-## Type Support for `.vue` Imports in TS
+![image](https://github.com/user-attachments/assets/b6de7894-ae6d-484a-8bde-c7c63c0bd892)
 
-TypeScript cannot handle type information for `.vue` imports by default, so we replace the `tsc` CLI with `vue-tsc` for type checking. In editors, we need [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) to make the TypeScript language service aware of `.vue` types.
+![image](https://github.com/user-attachments/assets/c5005b69-e9f5-4e5c-b90a-e82e26e14504)
 
-## Customize configuration
 
-See [Vite Configuration Reference](https://vite.dev/config/).
+# 🚀 Tecnologias utilizadas
+- Vue 3
 
-## Project Setup
+- TypeScript
+- Vitest – para testes
+- Vite – para build e dev server
+- Vue Router – para roteamento de páginas
+- Vuex – para gerenciamento de estado
+- Bulma – para estilos responsivos
+- Font Awesome – para ícones
+- Axios – para requisições HTTP
+- json-server – simulação de API REST fake
 
+
+
+# 📦 Instalação
+
+- Clone o repositório:
+```sh
+git clone git@github.com:wislla/alura-tracker.git
+cd alura-tracker
+```
+
+- Instale as dependências:
 ```sh
 npm install
 ```
 
-### Compile and Hot-Reload for Development
-
+- Inicie o servidor de desenvolvimento:
 ```sh
 npm run dev
 ```
 
-### Type-Check, Compile and Minify for Production
+- Inicie o json-server para simular a API:
 
 ```sh
-npm run build
+npx json-server --watch db.json
 ```
 
-### Lint with [ESLint](https://eslint.org/)
+# 🧪 Rodando os testes
+
+- Este projeto utiliza o Vitest para testes unitários.
+```sh
+npx vitest run
+```
+
+- Para executar em modo interativo com UI:
+```sh
+npx vitest
+```
+
+📄 Licença
+- Este projeto é de uso educacional, com base no curso da Alura. Sinta-se livre para utilizá-lo e modificá-lo.
+
+
+### Lint [ESLint](https://eslint.org/)
 
 ```sh
 npm run lint
 ```
+
+
