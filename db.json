@@ -1,0 +1,32 @@
+{
+  "projetos": [
+    {
+      "id": 1,
+      "nome": "Alura Tracker"
+    },
+    {
+      "id": "87ab",
+      "nome": "projeto 1s"
+    }
+  ],
+  "tarefas": [
+    {
+      "id": "87ab",
+      "duracaoEmSegundos": 1,
+      "descricao": "Tarefa Amelie",
+      "projeto": {
+        "id": "87ab",
+        "nome": "projeto 1s"
+      }
+    },
+    {
+      "id": "f036",
+      "duracaoEmSegundos": 3,
+      "descricao": "Refac a",
+      "projeto": {
+        "id": 1,
+        "nome": "Alura Tracker"
+      }
+    }
+  ]
+}
