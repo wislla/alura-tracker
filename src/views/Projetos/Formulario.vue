@@ -1,7 +1,7 @@
 <!-- eslint-disable vue/multi-word-component-names -->
 <script setup lang="ts">
 import { TipoNotificacao } from '@/interfaces/INotificacao'
-import { useNotificacao } from '@/mixins/notificar'
+import { useNotificacao } from '@/composables/notificar'
 import { useStore } from '@/store'
 import { ALTERAR_PROJETOS, CADASTRAR_PROJETOS } from '@/store/tipos-acoes'
 import { onMounted, ref } from 'vue'
@@ -48,7 +48,6 @@ onMounted(() => {
 
 <template>
   <section class="projetos">
-    <h1 class="title">Projetos</h1>
     <form @submit.prevent="salvar">
       <div class="field">
         <label for="nomeDoProjeto" class="label"> Nome do Projeto </label>
@@ -61,4 +60,8 @@ onMounted(() => {
   </section>
 </template>
 
-<style scoped></style>
+<style scoped>
+.projetos {
+  padding: 1.25rem;
+}
+</style>

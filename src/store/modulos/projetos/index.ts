@@ -42,26 +42,36 @@ export const projeto: Module<EstadoProjeto, Estado> = {
   },
   actions: {
     async [OBTER_PROJETOS]({ commit }) {
-      const resposta = await http.get('projetos')
-      console.log(resposta)
-      commit(DEFINIR_PROJETO, resposta.data)
+      try {
+        const resposta = await http.get('projetos')
+        commit(DEFINIR_PROJETO, resposta.data)
+      } catch (erro) {
+        console.error('Erro ao obter projetos:', erro)
+      }
     },
     async [CADASTRAR_PROJETOS](contexto, nomeDoProjeto: string) {
-      const resposta = await http.post('/projetos', {
-        nome: nomeDoProjeto,
-      })
-      console.log(resposta)
+      try {
+        await http.post('/projetos', {
+          nome: nomeDoProjeto,
+        })
+      } catch (erro) {
+        console.error('Erro ao cadastrar projeto:', erro)
+      }
     },
     async [ALTERAR_PROJETOS](contexto, projeto: IProjeto) {
-      const resposta = await http.put(`/projetos/${projeto.id}`, projeto)
-
-      console.log(resposta)
+      try {
+        await http.put(`/projetos/${projeto.id}`, projeto)
+      } catch (erro) {
+        console.error('Erro ao alterar projeto:', erro)
+      }
     },
     async [REMOVER_PROJETOS](contexto, id: string) {
-      contexto.commit(EXCLUIR_PROJETO, id)
-      const resposta = await http.delete(`/projetos/${id}`)
-
-      console.log(resposta)
+      try {
+        contexto.commit(EXCLUIR_PROJETO, id)
+        await http.delete(`/projetos/${id}`)
+      } catch (erro) {
+        console.error('Erro ao remover projeto:', erro)
+      }
     },
   },
 }

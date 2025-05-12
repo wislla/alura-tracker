@@ -5,7 +5,7 @@ import { useStore } from '@/store'
 import { computed } from 'vue'
 
 const store = useStore()
-const notificacoes = computed(() => store.state.notificacoes)
+const notificacoes = computed(() => store.state.notificacao.notificacoes)
 
 const contexto = {
   [TipoNotificacao.ATENCAO]: 'is-warning ',

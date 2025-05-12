@@ -6,7 +6,7 @@ import { computed, onMounted } from 'vue'
 
 const store = useStore()
 
-const projetos = computed(() => store.state.projetos.projetos)
+const projetos = computed(() => store.state.projeto.projetos)
 
 function excluirProjeto(id: string) {
   store.dispatch(REMOVER_PROJETOS, id)
@@ -39,8 +39,16 @@ onMounted(() => {
           <td>{{ projeto.id }}</td>
           <td>{{ projeto.nome }}</td>
           <td>
-            <router-link :to="`/projetos/${projeto.id}`">Editar</router-link>
-            <button class="button" @click="excluirProjeto(projeto.id)">Excluir</button>
+            <router-link :to="`/projetos/${projeto.id}`" class="button">
+              <span class="icon is-small">
+                <i class="fas fa-pencil-alt"></i>
+              </span>
+            </router-link>
+            <button class="button ml-2 is-danger" @click="excluirProjeto(projeto.id)">
+              <span class="icon is-small">
+                <i class="fas fa-trash"></i>
+              </span>
+            </button>
           </td>
         </tr>
       </tbody>

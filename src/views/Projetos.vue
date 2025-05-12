@@ -8,4 +8,8 @@
   </div>
 </template>
 
-<style scoped></style>
+<style scoped>
+.projetos {
+  padding: 1.25rem;
+}
+</style>

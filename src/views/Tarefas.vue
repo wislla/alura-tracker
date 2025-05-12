@@ -17,14 +17,14 @@ import Modal from '@/components/Modal.vue'
 
 const store = useStore()
 
-const tarefas = computed(() => store.state.tarefas)
+const tarefas = computed(() => store.state.tarefa.tarefas)
 
 function salvarTarefa(tarefa: ITarefa) {
   store.dispatch(CADASTRAR_TAREFAS, tarefa)
 }
 
 const listaEstaVazia = computed(() => {
-  return tarefas.value.length === 0
+  return (tarefas.value || []).length === 0
 })
 
 onMounted(() => {
