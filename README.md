@@ -4,11 +4,11 @@ Parte deste projeto foi inicialmente desenvolvida durante a Formação "Ouse com
 
 Após o término da formação, foi implementado melhorias na estrutura do código, organização dos componentes, inclusão de testes automatizados e ajustes visuais, visando torná-lo uma aplicação mais robusta e realista para uso prático ou como base para estudos.
 
-![image](https://github.com/user-attachments/assets/7b1915c5-63b5-4e3b-8fd9-e7016c0994a8)
+![image](https://github.com/user-attachments/assets/2427ef35-9579-422f-bd99-e643bbb7ca1f)
+![image](https://github.com/user-attachments/assets/a60e5711-a402-4d3c-81d0-40d9dada0069)
+![image](https://github.com/user-attachments/assets/c02879f2-0626-45ce-8433-3d94a9307f4f)
+![image](https://github.com/user-attachments/assets/af822a25-347a-4961-a27c-f8a0a8b0e50f)
 
-![image](https://github.com/user-attachments/assets/b6de7894-ae6d-484a-8bde-c7c63c0bd892)
-
-![image](https://github.com/user-attachments/assets/c5005b69-e9f5-4e5c-b90a-e82e26e14504)
 
 
 # 🚀 Tecnologias utilizadas
